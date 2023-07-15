@@ -1,0 +1,84 @@
+
+
+<nav class="navbar bg-dark">
+  <div class="container">
+    <h2>Angular crud operation</h2>
+  </div>
+  <div class="d-flex">
+    <button
+      class="btn btn-success"
+      data-bs-toggle="modal"
+      data-bs-target="#exampleModal"
+    >
+      Add employee
+    </button>
+  </div>
+</nav>
+
+<!-- Button trigger modal -->
+
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Add Employee Data</h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="employeeform" >
+          <div class="form-group mb-2">
+            <label for="exampleInputEmail1">name</label>
+            <input type="text" class="form-control" formControlName="name" placeholder="Name" />
+          </div>
+          <div class="form-group mb-2">
+            <label for="exampleInputEmail1">email</label>
+            <input
+              type="email"
+              class="form-control"
+              placeholder="Enter email"
+              formControlName="email"
+            />
+          </div>
+          <div class="form-group mb-2">
+            <label for="exampleInputEmail1"> city</label>
+            <input type="text" class="form-control"formControlName="city" placeholder="city" />
+          </div>
+          <div class="form-group mb-2">
+            <label for="exampleInputEmail1">pin code</label>
+            <input type="number" class="form-control"formControlName="pincode" placeholder="pin code" />
+          </div>
+          <div class="form-group mb-2">
+            <label for="exampleInputEmail1">phone number</label>
+            <input
+              type="number"
+              class="form-control"
+              placeholder="phone number"
+              formControlName="phone"
+            />
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">
+          Cancel
+        </button>
+        <button (click)="addemployee(this.employeeform.value)" type="button"  class="btn btn-primary">Add</button>
+      </div>
+    </div>
+  </div>
+</div>
