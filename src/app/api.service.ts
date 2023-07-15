@@ -11,8 +11,17 @@ export class ApiService {
   //add employee
 addemployee(data:datamodel){
 return this.http.post<datamodel>("http://localhost:3000/posts",data);
-}
+ }
+ //get employee
 getemployee(){
   return this.http.get<datamodel[]>("http://localhost:3000/posts");
 }
+ //delete 
+ deletemployee(id:number){
+  return this.http.delete<datamodel>("http://localhost:3000/posts/"+id);
+ }
+ //fetch data
+ fetchdata(id:number){
+  return this.http.get<datamodel>("http://localhost:3000/posts/"+id);
+ }
 }

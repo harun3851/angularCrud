@@ -1,0 +1,52 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card">
+        <h5>Update data</h5>
+        <div class="row">
+          <form>
+            <div class="form-group mb-2">
+              <label for="exampleInputEmail1">name</label>
+              <input type="text" class="form-control" placeholder="Name" />
+            </div>
+            <div class="form-group mb-2">
+              <label for="exampleInputEmail1">email</label>
+              <input
+                type="email"
+                class="form-control"
+                placeholder="Enter email"
+              />
+            </div>
+            <div class="form-group mb-2">
+              <label for="exampleInputEmail1"> city</label>
+              <input type="text" class="form-control" placeholder="city" />
+            </div>
+            <div class="form-group mb-2">
+              <label for="exampleInputEmail1">pin code</label>
+              <input
+                type="number"
+                class="form-control"
+                placeholder="pin code"
+              />
+            </div>
+            <div class="form-group mb-2">
+              <label for="exampleInputEmail1">phone number</label>
+              <input
+                type="number"
+                class="form-control"
+                placeholder="phone number"
+                formControlName="phone"
+              />
+            </div>
+          </form>
+        </div>
+        <div class="">
+          <button class="btn btn-success">update</button>&nbsp;
+          <button class="btn btn-dark">back</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<pre>{{employee|json}}</pre>
+
