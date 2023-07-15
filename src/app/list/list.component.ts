@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder,FormGroup,Validators} from '@angular/forms';
+import { ApiService } from '../api.service';
+import { datamodel } from './model';
 
 @Component({
   selector: 'app-list',
@@ -9,7 +11,8 @@ import { FormBuilder,FormGroup,Validators} from '@angular/forms';
 export class ListComponent implements OnInit {
 
   employeeform!:FormGroup;
-  constructor(private formbuilder:FormBuilder){}
+  data:undefined|datamodel[];
+  constructor(private formbuilder:FormBuilder, private api:ApiService){}
   ngOnInit():void{
     this.employeeform=this.formbuilder.group({
       name:['',Validators.required],
@@ -18,9 +21,21 @@ export class ListComponent implements OnInit {
       pincode:['',Validators.required],
       phone:['',Validators.required],
     })
-    
+    this.getemployee();
   }
-  addemployee(data:any){
-    console.log(data)
+  addemployee(data:datamodel){
+    //console.log(data)
+    this.api.addemployee(data).subscribe((rest=>{
+      this.employeeform.reset();
+    }
+    //get employee
+   
+    ))
+    this.getemployee();
+  }
+  getemployee(){
+    this.api.getemployee().subscribe(res=>{
+      this.data=res;
+    })
   }
 }

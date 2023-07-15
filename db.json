@@ -1,0 +1,44 @@
+{
+  "posts": [
+    {
+      "name": "koyuncu harun",
+      "email": "harun3851@hotmail.com",
+      "city": "Riihimäki",
+      "pincode": 11130,
+      "phone": 418087995,
+      "id": 1
+    },
+    {
+      "name": "koyuncu harun",
+      "email": "harun3851@hotmail.com",
+      "city": "Riihimäki",
+      "pincode": 11130,
+      "phone": 418087995,
+      "id": 2
+    },
+    {
+      "name": "koyuncu harun",
+      "email": "harun3851@hotmail.com",
+      "city": "Riihimäki",
+      "pincode": 11130,
+      "phone": 418087995,
+      "id": 3
+    },
+    {
+      "name": "harun koyuncu",
+      "email": "harun3851@hotmail.com",
+      "city": "riihimäki",
+      "pincode": 11130,
+      "phone": 418087995,
+      "id": 4
+    },
+    {
+      "name": "harun koyuncu",
+      "email": "harun3851@hotmail.com",
+      "city": "riihimäki",
+      "pincode": 11130,
+      "phone": 418087995,
+      "id": 5
+    }
+  ]
+}
